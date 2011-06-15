@@ -1,6 +1,5 @@
 <?php
 require_once 'com/buscape/php/api/APIInterface.php';
-require_once 'com/buscape/php/api/buscape/BuscapeAPI.php';
 require_once 'com/buscape/php/api/lomadee/LomadeeAPI.php';
 require_once 'com/buscape/php/http/HTTPConnection.php';
 require_once 'com/buscape/php/http/HTTPCookieManager.php';
@@ -29,14 +28,6 @@ class GrupoBuscape {
 	 */
 	public function __construct( $applicationId ) {
 		$this->applicationId = $applicationId;
-	}
-
-	/**
-	 * Recupera o objeto de integração com a API do BuscaPé.
-	 * @return	BuscapeAPI
-	 */
-	public function buscapeAPI() {
-		return $this->prepare( new BuscapeAPI() );
 	}
 
 	/**
