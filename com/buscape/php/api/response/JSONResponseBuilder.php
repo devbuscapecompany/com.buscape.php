@@ -32,6 +32,9 @@ class JSONResponseBuilder extends ResponseBuilder {
 	public function parse( $content ) {
 		$json = json_decode( $content );
 
+		var_dump( $json );
+		die;
+
 		if ( isset( $json->category ) ) {
 			$this->result->setCategory( $this->parseCategory( $json->category ) );
 		}
