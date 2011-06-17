@@ -1,14 +1,15 @@
 <?php
 /**
- * Classes relacionadas com a API Lomadee
+ * @brief	Classes relacionadas com a API Lomadee
  * @package	com.buscape.php.api.lomadee
  */
 
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
- * Essa classe representa a operação findOfferList da
- * API do Lomadee.
+ * @brief	Operação findOfferList
+ * @details	Essa classe representa a operação findOfferList
+ * da API do Lomadee.
  *
  * Listagem das ofertas disponíveis apenas na Lomadee,
  * por exemplo, notebooks da Dell / Saraiva, livros da
@@ -20,7 +21,6 @@ require_once 'com/buscape/php/api/APIOperation.php';
  * etc, porém os links são CPA. Na API BuscaPé o mesmo serviço
  * de ofertas, os links são CPC, sendo a única diferença entre
  * os serviços.
- * @package	com.buscape.php.api.lomadee
  */
 class LomadeeFindOfferListOperation extends APIOperation {
 	/**
@@ -44,7 +44,7 @@ class LomadeeFindOfferListOperation extends APIOperation {
 	private $productId;
 
 	/**
-	 * Recupera o código de barras.
+	 * @brief	Recupera o código de barras.
 	 * @return	string
 	 */
 	public function getBarCode() {
@@ -52,7 +52,7 @@ class LomadeeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera o ID da categoria.
+	 * @brief	Recupera o ID da categoria.
 	 * @return	integer
 	 */
 	public function getCategoryId() {
@@ -60,7 +60,7 @@ class LomadeeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera a palavra chave.
+	 * @brief	Recupera a palavra chave.
 	 * @return	string
 	 */
 	public function getKeyword() {
@@ -68,7 +68,7 @@ class LomadeeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera o ID do produto.
+	 * @brief	Recupera o ID do produto.
 	 * @return	integer
 	 */
 	public function getProductId() {
@@ -84,7 +84,7 @@ class LomadeeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o código de barras.
+	 * @brief	Define o código de barras.
 	 * @param	string $barcode
 	 */
 	public function setBarCode( $barcode ) {
@@ -92,8 +92,9 @@ class LomadeeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID da categoria.
-	 * O parâmetro categoryId deve ser sempre o ID de uma categoria final.
+	 * @brief	Define o ID da categoria.
+	 * @details	O parâmetro categoryId deve ser sempre o ID de uma
+	 * categoria final.
 	 * Algumas categorias finais não possuem produtos, apenas ofertas.
 	 * Neste caso a resposta do XML terá sua lista de produtos vazia.
 	 * Para não perder o vínculo da consulta, o serviço disponibilizará a
@@ -112,7 +113,7 @@ class LomadeeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define a palavra chave.
+	 * @brief	Define a palavra chave.
 	 * @param	string $keyword
 	 * @throws	InvalidArgumentException Se a palavra chave definida
 	 * não for uma string ou um valor scalar.
@@ -127,7 +128,7 @@ class LomadeeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID do produto.
+	 * @brief	Define o ID do produto.
 	 * @param	integer $productId
 	 * @throws	InvalidArgumentException Se o ID do produto não for um
 	 * inteiro.

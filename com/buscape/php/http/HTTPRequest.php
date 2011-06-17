@@ -1,6 +1,7 @@
 <?php
 /**
- * Classes e interfaces relacionadas com o protocolo HTTP
+ * @brief	Protocolo HTTP
+ * @details	Classes e interfaces relacionadas com o protocolo HTTP
  * @package com.buscape.php.http
  */
 
@@ -9,13 +10,13 @@ require_once 'com/buscape/php/http/HTTPAuthenticator.php';
 require_once 'com/buscape/php/http/HTTPRequestMethod.php';
 
 /**
- * Interface para definição de um objeto que fará uma
+ * @brief	Requisição HTTP
+ * @details	Interface para definição de um objeto que fará uma
  * requisição HTTP.
- * @package com.buscape.php.http
  */
 interface HTTPRequest {
 	/**
-	 * Adiciona um campo de cabeçalho para ser enviado com a
+	 * @brief	Adiciona um campo de cabeçalho para ser enviado com a
 	 * requisição.
 	 * @param	string $name Nome do campo de cabeçalho.
 	 * @param	string $value Valor do campo de cabeçalho.
@@ -27,18 +28,19 @@ interface HTTPRequest {
 	public function addRequestHeader( $name , $value , $override = true );
 
 	/**
-	 * Autentica uma requisição HTTP.
+	 * @brief	Autentica uma requisição HTTP.
 	 * @param	HTTPAuthenticator $authenticator
 	 */
 	public function authenticate( HTTPAuthenticator $authenticator );
 
 	/**
-	 * Fecha a requisição.
+	 * @brief	Fecha a requisição.
 	 */
 	public function close();
 
 	/**
-	 * Executa a requisição HTTP em um caminho utilizando um
+	 * @brief	Executa a requisição HTTP
+	 * @details	Executa a requisição HTTP em um caminho utilizando um
 	 * método específico.
 	 * @param	string $method Método da requisição.
 	 * @param	string $path Alvo da requisição.
@@ -49,20 +51,21 @@ interface HTTPRequest {
 	public function execute( $path = '/' , $method = HTTPRequestMethod::GET );
 
 	/**
-	 * Recupera a resposta da requisição.
+	 * @brief	Recupera a resposta da requisição.
 	 * @return	HTTPResponse
 	 */
 	public function getResponse();
 
 	/**
-	 * Abre a requisição.
+	 * @brief	Abre a requisição.
 	 * @param	HTTPConnection $httpConnection Conexão HTTP
 	 * relacionada com essa requisição
 	 */
 	public function open( HTTPConnection $httpConnection );
 
 	/**
-	 * Define um parâmetro que será enviado com a requisição,
+	 * @brief	Define um parâmetro
+	 * @details	Define um parâmetro que será enviado com a requisição,
 	 * um parâmetro é um par nome-valor que será enviado como uma
 	 * query string (<b>ex:</b> <i>?name=value</i>).
 	 * @param	string $name Nome do parâmetro.
@@ -73,7 +76,7 @@ interface HTTPRequest {
 	public function setParameter( $name , $value );
 
 	/**
-	 * Corpo da requisição HTTP.
+	 * @brief	Corpo da requisição HTTP.
 	 * @param	string $contentBody
 	 */
 	public function setRequestBody( $requestBody );

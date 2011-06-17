@@ -1,6 +1,6 @@
 <?php
 /**
- * Classes relacionadas com a API Lomadee
+ * @brief	Classes relacionadas com a API Lomadee
  * @package	com.buscape.php.api.lomadee
  */
 
@@ -12,12 +12,13 @@ require_once 'com/buscape/php/api/lomadee/LomadeeFindOfferListOperation.php';
 require_once 'com/buscape/php/api/lomadee/LomadeeFindProductListOperation.php';
 
 /**
- * Essa classe representa a API Lomadee.
- * @package	com.buscape.php.api.lomadee
+ * @brief	Essa classe representa a API Lomadee.
  */
 class LomadeeAPI extends APIInterface {
 	/**
-	 * Cria um objeto que representa a operação createSource.
+	 * @brief	Criar sourceId (código) para o Publisher
+	 * @details	Cria um objeto que representa a operação createSource
+	 * para criação de um sourceIf (código) para o Publisher.
 	 * @return	LomadeeCreateSourceOperation
 	 */
 	public function createSource() {
@@ -25,7 +26,8 @@ class LomadeeAPI extends APIInterface {
 	}
 
 	/**
-	 * Cria um objeto que representa a operação findAdvertiserList.
+	 * @brief	Lista de anunciantes
+	 * @details	Cria um objeto que representa a operação findAdvertiserList.
 	 * @return	LomadeeFindAdvertiserListOperation
 	 */
 	public function findAdvertiserList() {
@@ -33,7 +35,8 @@ class LomadeeAPI extends APIInterface {
 	}
 
 	/**
-	 * Cria um objeto que representa uma operação findCategoryList.
+	 * @brief	Lista de categorias
+	 * @details	Cria um objeto que representa uma operação findCategoryList.
 	 * @return	LomadeeFindCategoryListOperation
 	 */
 	public function findCategoryList() {
@@ -41,7 +44,8 @@ class LomadeeAPI extends APIInterface {
 	}
 
 	/**
-	 * Cria um objeto que representa uma operação findOfferList.
+	 * @brief	Lista de ofertas
+	 * @details	Cria um objeto que representa uma operação findOfferList.
 	 * @return	LomadeeFindOfferListOperation
 	 */
 	public function findOfferList() {
@@ -49,7 +53,8 @@ class LomadeeAPI extends APIInterface {
 	}
 
 	/**
-	 * Cria um objeto que representa a operação findProductList.
+	 * @brief	Lista de produtos
+	 * @details	Cria um objeto que representa a operação findProductList.
 	 * @return	LomadeeFindProductListOperation
 	 */
 	public function findProductList() {

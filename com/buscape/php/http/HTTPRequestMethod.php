@@ -1,12 +1,12 @@
 <?php
 /**
- * Classes e interfaces relacionadas com o protocolo HTTP
+ * @brief	Protocolo HTTP
+ * @details	Classes e interfaces relacionadas com o protocolo HTTP
  * @package com.buscape.php.http
  */
 
 /**
- * Constantes para identificar o método de requisição HTTP
- * @package com.buscape.php.http
+ * @brief	Constantes para identificar o método de requisição HTTP
  */
 interface HTTPRequestMethod {
 	const DELETE = 'DELETE';

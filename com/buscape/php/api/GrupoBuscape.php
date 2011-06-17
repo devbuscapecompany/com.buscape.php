@@ -1,7 +1,8 @@
 <?php
 /**
- * Classes e interfaces para integração com as APIs do
- * Grupo BuscaPé
+ * @brief	Pacote base da biblioteca do grupo BuscaPé
+ * @details	Esse pacote contém as classes e interfaces
+ * necessárias para integração com as APIs do Grupo BuscaPé.
  * @package	com.buscape.php.api
  */
 
@@ -12,12 +13,14 @@ require_once 'com/buscape/php/http/HTTPConnection.php';
 require_once 'com/buscape/php/http/HTTPCookieManager.php';
 
 /**
- * A classe GrupoBuscape define uma interface para se criar objetos
- * de integração com as várias APIs do Grupo BuscaPé.
+ * @brief	Interface para acesso às APIs do Grupo BuscaPé.
+ * @details	A classe GrupoBuscape define uma interface para
+ * se criar objetos de integração com as várias APIs do Grupo
+ * BuscaPé.
  *
- * Essa classe configura o objeto de integração, diminuindo a dificuldade
- * de implementação de uma integração com a API escolhida.
- * @package	com.buscape.php.api
+ * Essa classe configura o objeto de integração, diminuindo a
+ * dificuldade de implementação de uma integração com a API
+ * escolhida.
  */
 class GrupoBuscape {
 	/**
@@ -31,7 +34,9 @@ class GrupoBuscape {
 	private $sandbox = false;
 
 	/**
-	 * Constroi o objeto que engloba todas as APIs do Grupo BuscaPé
+	 * @brief	Construtor do objeto de interface GrupoBuscape
+	 * @details	Constroi o objeto que engloba todas as APIs do
+	 * Grupo BuscaPé para acesso às APIs do Grupo BuscaPé
 	 * @param	string $applicationId ID da aplicação
 	 */
 	public function __construct( $applicationId ) {
@@ -39,7 +44,8 @@ class GrupoBuscape {
 	}
 
 	/**
-	 * Recupera o objeto de integração com a API do BuscaPé.
+	 * @brief	API BuscaPé
+	 * @details	Recupera o objeto de integração com a API do BuscaPé.
 	 * @return	BuscapeAPI
 	 */
 	public function buscapeAPI() {
@@ -47,7 +53,8 @@ class GrupoBuscape {
 	}
 
 	/**
-	 * Recupera o objeto de integração com a API do Lomadee.
+	 * @brief	API Lomadee
+	 * @details	Recupera o objeto de integração com a API do Lomadee.
 	 * @return	LomadeeAPI
 	 */
 	public function lomadeeAPI() {
@@ -55,8 +62,9 @@ class GrupoBuscape {
 	}
 
 	/**
-	 * Cria um objeto de conexão HTTP para ser utilizado nas chamadas
-	 * às operações de uma API do Grupo Buscapé.
+	 * @brief	Conexão HTTP
+	 * @details	Cria um objeto de conexão HTTP para ser utilizado
+	 * nas chamadas às operações de uma API do Grupo Buscapé.
 	 * @param	string $hostname Nome do host onde as operações serão
 	 * executadas.
 	 * @return	HTTPConnection
@@ -84,8 +92,9 @@ class GrupoBuscape {
 	}
 
 	/**
-	 * Utiliza o sandbox para testes de integração com uma API do
-	 * Grupo BuscaPé.
+	 * @brief	Ambiente Sandbox
+	 * @details	Define que será utilizado o ambiente sandbox para testes
+	 * de integração com uma API do Grupo BuscaPé.
 	 * @return	GrupoBuscape
 	 */
 	public function sandbox() {

@@ -1,7 +1,8 @@
 <?php
 /**
- * Classes e interfaces para integração com as APIs do
- * Grupo BuscaPé
+ * @brief	Pacote base da biblioteca do grupo BuscaPé
+ * @details	Esse pacote contém as classes e interfaces
+ * necessárias para integração com as APIs do Grupo BuscaPé
  * @package	com.buscape.php.api
  */
 
@@ -10,10 +11,9 @@ require_once 'com/buscape/php/api/response/JSONResponseBuilder.php';
 require_once 'com/buscape/php/api/response/XMLResponseBuilder.php';
 
 /**
- * Interface para criação de uma operação das APIs
+ * @brief	Interface de uma operação de uma API
+ * @details	Interface para criação de uma operação das APIs
  * do Grupo BuscaPé.
- * @abstract
- * @package	com.buscape.php.api
  */
 abstract class APIOperation {
 	/**
@@ -42,7 +42,7 @@ abstract class APIOperation {
 	private $httpResponse;
 
 	/**
-	 * Constroi o objeto que representa uma operação da API
+	 * @details Constroi o objeto que representa uma operação da API
 	 * @param	APIInterface $apiInterface Objeto que representa
 	 * a API.
 	 */
@@ -61,7 +61,8 @@ abstract class APIOperation {
 	}
 
 	/**
-	 * Recupera o objeto HTTPResponse com a resposta HTTP
+	 * @brief	Última resposta HTTP
+	 * @details	Recupera o objeto HTTPResponse com a resposta HTTP
 	 * da última chamada à operação.
 	 * @return	HTTPResponse
 	 */
@@ -70,7 +71,8 @@ abstract class APIOperation {
 	}
 
 	/**
-	 * Efetua a chamada à uma operação da API.
+	 * @brief	Faz a chamada à uma operação de API
+	 * @details	Efetua a chamada à uma operação da API.
 	 * @return	Result
 	 */
 	public function call() {
@@ -97,7 +99,7 @@ abstract class APIOperation {
 	}
 
 	/**
-	 * Recupera o IP do usuário.
+	 * @brief	Recupera o IP do usuário.
 	 * @return	string
 	 */
 	public function getClientIP() {
@@ -105,8 +107,8 @@ abstract class APIOperation {
 	}
 
 	/**
-	 * Recupera o código do país utilizado na internacionalização
-	 * dos resultados das chamadas à operação.
+	 * @details Recupera o código do país utilizado na
+	 * internacionalização dos resultados das chamadas à operação.
 	 * @return	string
 	 */
 	public function getCountryCode() {
@@ -114,8 +116,8 @@ abstract class APIOperation {
 	}
 
 	/**
-	 * Recupera o formato que será retornado a resposta das
-	 * requisições.
+	 * @details	Recupera o formato que será retornado a resposta
+	 * das requisições.
 	 * @return	string
 	 */
 	public function getFormat() {
@@ -123,8 +125,8 @@ abstract class APIOperation {
 	}
 
 	/**
-	 * Recupera o caminho onde a chamada à operação deverá ser
-	 * realizado.
+	 * @details Recupera o caminho onde a chamada à operação deverá
+	 * ser realizado.
 	 * @return	string
 	 */
 	protected function getOperationPath() {
@@ -132,7 +134,7 @@ abstract class APIOperation {
 	}
 
 	/**
-	 * Define o IP do usuário.
+	 * @brief	Define o IP do usuário.
 	 * @param	string $clientIP O IP do usuário.
 	 * @throws	InvalidArgumentException Se o IP for inválido.
 	 */
@@ -145,8 +147,8 @@ abstract class APIOperation {
 	}
 
 	/**
-	 * Define o código do país para internacionalização dos resultados das
-	 * operações da API.
+	 * @details Define o código do país para internacionalização dos
+	 * resultados das operações da API.
 	 * @param	string $countryCode Código do país com dois caracteres (BR, AR, etc...)
 	 * @throws	InvalidArgumentException
 	 */
@@ -159,7 +161,7 @@ abstract class APIOperation {
 	}
 
 	/**
-	 * Define o formato da resposta.
+	 * @brief	Define o formato da resposta.
 	 * @param	string $format
 	 */
 	public function setFormat( $format ) {

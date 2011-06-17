@@ -1,14 +1,15 @@
 <?php
 /**
- * Classes e interfaces relacionadas com o protocolo HTTP
+ * @brief	Protocolo HTTP
+ * @details	Classes e interfaces relacionadas com o protocolo HTTP
  * @package com.buscape.php.http
  */
 
 require_once 'com/buscape/php/http/CookieManager.php';
 
 /**
- * Implementação de um objeto representa uma resposta HTTP.
- * @package com.buscape.php.http
+ * @brief	Resposta HTTP
+ * @details	Implementação de um objeto representa uma resposta HTTP.
  */
 class HTTPResponse {
 	/**
@@ -32,7 +33,7 @@ class HTTPResponse {
 	private $statusMessage;
 
 	/**
-	 * Recupera o corpo da resposta HTTP.
+	 * @brief	Recupera o corpo da resposta HTTP.
 	 * @return	string
 	 */
 	public function getContent() {
@@ -40,7 +41,7 @@ class HTTPResponse {
 	}
 
 	/**
-	 * Recupera o tamanho do corpo da resposta.
+	 * @brief	Recupera o tamanho do corpo da resposta.
 	 * @return	integer
 	 */
 	public function getContentLength() {
@@ -48,7 +49,7 @@ class HTTPResponse {
 	}
 
 	/**
-	 * Recupera o tipo de conteúdo da resposta.
+	 * @brief	Recupera o tipo de conteúdo da resposta.
 	 * @return	string
 	 */
 	public function getContentType() {
@@ -56,7 +57,7 @@ class HTTPResponse {
 	}
 
 	/**
-	 * Recupera o código de status da resposta do servidor.
+	 * @brief	Recupera o código de status da resposta do servidor.
 	 * @return	integer
 	 */
 	public function getStatusCode() {
@@ -64,7 +65,7 @@ class HTTPResponse {
 	}
 
 	/**
-	 * Recupera a mensagem de status da resposta do servidor.
+	 * @brief	Recupera a mensagem de status da resposta do servidor.
 	 * @return	string
 	 */
 	public function getStatusMessage() {
@@ -72,7 +73,7 @@ class HTTPResponse {
 	}
 
 	/**
-	 * Verifica se existe um cabeçalho de resposta HTTP.
+	 * @brief	Verifica se existe um cabeçalho de resposta HTTP.
 	 * @param	string $name Nome do cabeçalho
 	 * @return	boolean
 	 */
@@ -81,7 +82,7 @@ class HTTPResponse {
 	}
 
 	/**
-	 * Recupera o valor um campo de cabeçalho da resposta HTTP.
+	 * @brief	Recupera o valor um campo de cabeçalho da resposta HTTP.
 	 * @param	string $name Nome do campo de cabeçalho.
 	 * @return	string O valor do campo ou NULL se não estiver
 	 * existir.
@@ -107,7 +108,7 @@ class HTTPResponse {
 	}
 
 	/**
-	 * Recupera um valor como inteiro de um campo de cabeçalho da
+	 * @brief	Recupera um valor como inteiro de um campo de cabeçalho da
 	 * resposta HTTP.
 	 * @param	string $name Nome do campo de cabeçalho.
 	 * @return	integer
@@ -117,7 +118,7 @@ class HTTPResponse {
 	}
 
 	/**
-	 * Recupera um valor como unix timestamp de um campo de cabeçalho
+	 * @brief	Recupera um valor como unix timestamp de um campo de cabeçalho
 	 * da resposta HTTO.
 	 * @param	string $name Nome do campo de cabeçalho.
 	 * @return	integer UNIX Timestamp ou NULL se não estiver definido.
@@ -131,7 +132,7 @@ class HTTPResponse {
 	}
 
 	/**
-	 * Define a resposta da requisição HTTP.
+	 * @brief	Define a resposta da requisição HTTP.
 	 * @param	string $response Toda a resposta da requisição
 	 */
 	public function setRawResponse( $response , CookieManager $cookieManager = null ) {

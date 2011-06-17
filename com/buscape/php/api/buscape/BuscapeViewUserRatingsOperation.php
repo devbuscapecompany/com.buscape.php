@@ -1,15 +1,15 @@
 <?php
 /**
- * Classes relacionadas com a API BuscaPé
+ * @brief	Classes relacionadas com a API BuscaPé
  * @package	com.buscape.php.api.buscape
  */
 
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
- * Essa classe representa a operação viewUserRatings da
- * API do BuscaPé.
- * @package	com.buscape.php.api.buscape
+ * @brief	Avaliação de usuários
+ * @details	Essa classe representa a operação viewUserRatings
+ * da API do BuscaPé.
  */
 class BuscapeViewUserRatingsOperation extends APIOperation {
 	/**
@@ -18,7 +18,7 @@ class BuscapeViewUserRatingsOperation extends APIOperation {
 	private $productId;
 
 	/**
-	 * Recupera o ID do produto.
+	 * @brief	Recupera o ID do produto.
 	 * @return	integer
 	 */
 	public function getProductId() {
@@ -34,7 +34,7 @@ class BuscapeViewUserRatingsOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID do produto.
+	 * @brief	Define o ID do produto.
 	 * @param	integer $productId
 	 * @throws	InvalidArgumentException Se o ID do produto não for
 	 * um inteiro

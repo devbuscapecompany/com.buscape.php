@@ -1,14 +1,15 @@
 <?php
 /**
- * Classes relacionadas com a API Lomadee
+ * @brief	Classes relacionadas com a API Lomadee
  * @package	com.buscape.php.api.lomadee
  */
 
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
- * Essa classe representa a operação findProductList da
- * API do Lomadee.
+ * @brief	Operação findProductList
+ * @details	Essa classe representa a operação findProductList
+ * da API do Lomadee.
  *
  * Listagem dos produtos (PUs) disponíveis apenas na Lomadee,
  * por exemplo, notebooks da Dell / Saraiva, livros da Saraiva,
@@ -17,7 +18,6 @@ require_once 'com/buscape/php/api/APIOperation.php';
  * Toda a documentação do serviço findProductList da API BuscaPé
  * se aplica ao serviço findProductList da API Lomadee. Possui
  * os mesmos filtros, os mesmos resultados, etc
- * @package	com.buscape.php.api.lomadee
  */
 class LomadeeFindProductListOperation extends APIOperation {
 	/**
@@ -31,7 +31,7 @@ class LomadeeFindProductListOperation extends APIOperation {
 	private $keyword;
 
 	/**
-	 * Recupera o ID da categoria.
+	 * @brief	Recupera o ID da categoria.
 	 * @return	integer
 	 */
 	public function getCategoryId() {
@@ -39,7 +39,7 @@ class LomadeeFindProductListOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera a palavra chave.
+	 * @brief	Recupera a palavra chave.
 	 * @return	string
 	 */
 	public function getKeyword() {
@@ -55,8 +55,9 @@ class LomadeeFindProductListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID da categoria.
-	 * O parâmetro categoryId deve ser sempre o ID de uma categoria final.
+	 * @brief	Define o ID da categoria.
+	 * @details	O parâmetro categoryId deve ser sempre o ID de uma categoria
+	 * final.
 	 * Algumas categorias finais não possuem produtos, apenas ofertas.
 	 * Neste caso a resposta do XML terá sua lista de produtos vazia.
 	 * Para não perder o vínculo da consulta, o serviço disponibilizará a
@@ -75,7 +76,7 @@ class LomadeeFindProductListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define a palavra chave.
+	 * @brief	Define a palavra chave.
 	 * @param	string $keyword
 	 * @throws	InvalidArgumentException Se a palavra chave definida
 	 * não for uma string ou um valor scalar.

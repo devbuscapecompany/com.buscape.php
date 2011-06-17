@@ -1,15 +1,15 @@
 <?php
 /**
- * Classes relacionadas com a API BuscaPé
+ * @brief	Classes relacionadas com a API BuscaPé
  * @package	com.buscape.php.api.buscape
  */
 
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
- * Essa classe representa a operação findOfferList da
+ * @brief	Lista de ofertas
+ * @details	Essa classe representa a operação findOfferList da
  * API do BuscaPé.
- * @package	com.buscape.php.api.buscape
  */
 class BuscapeFindOfferListOperation extends APIOperation {
 	/**
@@ -33,7 +33,7 @@ class BuscapeFindOfferListOperation extends APIOperation {
 	private $productId;
 
 	/**
-	 * Recupera o código de barras.
+	 * @brief	Recupera o código de barras.
 	 * @return	string
 	 */
 	public function getBarCode() {
@@ -41,7 +41,7 @@ class BuscapeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera o ID da categoria.
+	 * @brief	Recupera o ID da categoria.
 	 * @return	integer
 	 */
 	public function getCategoryId() {
@@ -49,7 +49,7 @@ class BuscapeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera a palavra chave.
+	 * @brief	Recupera a palavra chave.
 	 * @return	string
 	 */
 	public function getKeyword() {
@@ -57,7 +57,7 @@ class BuscapeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera o ID do produto.
+	 * @brief	Recupera o ID do produto.
 	 * @return	integer
 	 */
 	public function getProductId() {
@@ -73,7 +73,7 @@ class BuscapeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o código de barras.
+	 * @brief	Define o código de barras.
 	 * @param	string $barcode
 	 */
 	public function setBarCode( $barcode ) {
@@ -81,8 +81,9 @@ class BuscapeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID da categoria.
-	 * O parâmetro categoryId deve ser sempre o ID de uma categoria final.
+	 * @brief	Define o ID da categoria.
+	 * @details	O parâmetro categoryId deve ser sempre o ID de uma
+	 * categoria final.
 	 * Algumas categorias finais não possuem produtos, apenas ofertas.
 	 * Neste caso a resposta do XML terá sua lista de produtos vazia.
 	 * Para não perder o vínculo da consulta, o serviço disponibilizará a
@@ -101,7 +102,7 @@ class BuscapeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define a palavra chave.
+	 * @brief	Define a palavra chave.
 	 * @param	string $keyword
 	 * @throws	InvalidArgumentException Se a palavra chave definida
 	 * não for uma string ou um valor scalar.
@@ -116,7 +117,7 @@ class BuscapeFindOfferListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID do produto.
+	 * @brief	Define o ID do produto.
 	 * @param	integer $productId
 	 * @throws	InvalidArgumentException Se o ID do produto não for um
 	 * inteiro.

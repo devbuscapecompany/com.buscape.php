@@ -1,20 +1,20 @@
 <?php
 /**
- * Classes relacionadas com a API Lomadee
+ * @brief	Classes relacionadas com a API Lomadee
  * @package	com.buscape.php.api.lomadee
  */
 
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
- * Essa classe representa a operação findAdvertiserList da
- * API do Lomadee.
+ * @brief	Operação findAdvertiserList
+ * @details	Essa classe representa a operação findAdvertiserList
+ * da API do Lomadee.
  *
  * O serviço findAdvertisersList retorna uma lista de anunciantes
  * vinculados a um determinado publisher, podendo assim obter uma
  * melhora na configuração de suas aplicações e permitindo que os
  * usuários escolham quais programas a aplicação utilizará.
- * @package	com.buscape.php.api.lomadee
  */
 class LomadeeFindAdvertiserListOperation extends APIOperation {
 	/**
@@ -33,7 +33,7 @@ class LomadeeFindAdvertiserListOperation extends APIOperation {
 	private $token;
 
 	/**
-	 * Recupera o ID do publisher
+	 * @brief	Recupera o ID do publisher
 	 * @return	integer
 	 */
 	public function getPublisherId() {
@@ -41,7 +41,7 @@ class LomadeeFindAdvertiserListOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera o ID do site selecionado pelo publisher
+	 * @brief	Recupera o ID do site selecionado pelo publisher
 	 * @return	integer
 	 */
 	public function getSiteId() {
@@ -49,7 +49,7 @@ class LomadeeFindAdvertiserListOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera o Token utilizado para validação de requisição
+	 * @brief	Recupera o Token utilizado para validação de requisição
 	 * @return	string
 	 */
 	public function getToken() {
@@ -65,7 +65,7 @@ class LomadeeFindAdvertiserListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID do publisher
+	 * @brief	Define o ID do publisher
 	 * @param	integer $publisherId
 	 */
 	public function setPublisherId( $publisherId ) {
@@ -73,7 +73,7 @@ class LomadeeFindAdvertiserListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID do site selecionado pelo publisher
+	 * @brief	Define o ID do site selecionado pelo publisher
 	 * @param integer $siteId
 	 */
 	public function setSiteId( $siteId ) {
@@ -81,7 +81,7 @@ class LomadeeFindAdvertiserListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o Token utilizado para validação de requisição
+	 * @brief	Define o Token utilizado para validação de requisição
 	 * @param string $token
 	 */
 	public function setToken( $token ) {

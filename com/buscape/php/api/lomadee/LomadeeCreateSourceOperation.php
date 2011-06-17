@@ -1,20 +1,20 @@
 <?php
 /**
- * Classes relacionadas com a API Lomadee
+ * @brief	Classes relacionadas com a API Lomadee
  * @package	com.buscape.php.api.lomadee
  */
 
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
- * Essa classe representa a operação createSource da
+ * @brief	Operação createSource
+ * @details	Essa classe representa a operação createSource da
  * API do Lomadee.
  *
  * Serviço utilizado somente na integração do Aplicativo com
  * a Lomadee. Dentro do fluxo de integração, o aplicativo utiliza
  * esse serviço para criar sourceId (código) para o Publisher que
  * deseja utiliza-lo.
- * @package	com.buscape.php.api.lomadee
  */
 class LomadeeCreateSourceOperation extends APIOperation {
 	/**
@@ -43,7 +43,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	private $token;
 
 	/**
-	 * Recupera a Lista de IDs das campanhas separados por virgula.
+	 * @brief	Recupera a Lista de IDs das campanhas separados por virgula.
 	 * @return	string
 	 */
 	public function getCampaignList() {
@@ -51,7 +51,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera o ID do publisher
+	 * @brief	Recupera o ID do publisher
 	 * @return	integer
 	 */
 	public function getPublisherId() {
@@ -59,7 +59,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera o ID do site selecionado pelo publisher.
+	 * @brief	Recupera o ID do site selecionado pelo publisher.
 	 * @return	integer
 	 */
 	public function getSiteId() {
@@ -67,7 +67,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera o Nome do código
+	 * @brief	Recupera o Nome do código
 	 * @return	string
 	 */
 	public function getSourceName() {
@@ -75,7 +75,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera o Token utilizado para validação da requisição.
+	 * @brief	Recupera o Token utilizado para validação da requisição.
 	 * @return	string
 	 */
 	public function getToken() {
@@ -91,7 +91,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	}
 
 	/**
-	 * Define a Lista de IDs das campanhas separados por virgula.
+	 * @brief	Define a Lista de IDs das campanhas separados por virgula.
 	 * @param string $campaignList
 	 */
 	public function setCampaignList( $campaignList ) {
@@ -99,7 +99,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID do publisher
+	 * @brief	Define o ID do publisher
 	 * @param integer $publisherId
 	 */
 	public function setPublisherId( $publisherId ) {
@@ -107,7 +107,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID do site selecionado pelo publisher.
+	 * @brief	Define o ID do site selecionado pelo publisher.
 	 * @param integer $siteId
 	 */
 	public function setSiteId( $siteId ) {
@@ -115,7 +115,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o Nome do código.
+	 * @brief	Define o Nome do código.
 	 * @param string $sourceName
 	 */
 	public function setSourceName( $sourceName ) {
@@ -123,7 +123,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o Token utilizado para validação da requisição.
+	 * @brief	Define o Token utilizado para validação da requisição.
 	 * @param string $token
 	 */
 	public function setToken( $token ) {

@@ -1,60 +1,62 @@
 <?php
 /**
- * Classes e interfaces relacionadas com o protocolo HTTP
+ * @brief	Protocolo HTTP
+ * @details	Classes e interfaces relacionadas com o protocolo HTTP
  * @package com.buscape.php.http
  */
 
 /**
- * Implementação de um cookie HTTP segundo a especificação
+ * @brief	Cookie HTTP
+ * @details	Implementação de um cookie HTTP segundo a especificação
  * RFC 2109.
- * @package com.buscape.php.http
  */
 class Cookie {
 	/**
-	 * Comentário opcional do cookie
-	 * @var	string
+	 * @brief	Comentário opcional do cookie
+	 * @var		string
 	 */
 	protected $comment;
 
 	/**
-	 * Domínio do cookie
-	 * @var	string
+	 * @brief	Domínio do cookie
+	 * @var		string
 	 */
 	protected $domain;
 
 	/**
-	 * Expiração do cookie (unix timestamp)
-	 * @var	integer
+	 * @brief	Expiração do cookie (unix timestamp)
+	 * @var		integer
 	 */
 	protected $expires;
 
 	/**
-	 * Nome do cookie
-	 * @var	string
+	 * @brief	Nome do cookie
+	 * @var		string
 	 */
 	protected $name;
 
 	/**
-	 * Caminho do cookie
-	 * @var	string
+	 * @brief	Caminho do cookie
+	 * @var		string
 	 */
 	protected $path;
 
 	/**
-	 * Indica se o User-Agent deve utilizar o cookie
+	 * @brief	Ambiente seguro (HTTPS)
+	 * @details	Indica se o User-Agent deve utilizar o cookie
 	 * apenas em ambiente seguro (HTTPS)
-	 * @var	boolean
+	 * @var		boolean
 	 */
 	protected $secure;
 
 	/**
-	 * Valor do cookie
-	 * @var	string
+	 * @brief	Valor do cookie
+	 * @var		string
 	 */
 	protected $value;
 
 	/**
-	 * Constroi um cookie
+	 * @brief	Constroi um cookie
 	 * @param	string $name Nome do cookie
 	 * @param	string $value Valor do cookie
 	 * @param	string $domain Domínio do cookie
@@ -82,7 +84,7 @@ class Cookie {
 	}
 
 	/**
-	 * Retorna a representação do Cookie como uma string
+	 * @brief	Retorna a representação do Cookie como uma string
 	 * @return	string
 	 */
 	public function __toString() {
@@ -90,7 +92,7 @@ class Cookie {
 	}
 
 	/**
-	 * Recupera o comentário do cookie
+	 * @brief	Recupera o comentário do cookie
 	 * @return	string
 	 */
 	public function getComment() {
@@ -98,7 +100,7 @@ class Cookie {
 	}
 
 	/**
-	 * Recupera o domínio do cookie
+	 * @brief	Recupera o domínio do cookie
 	 * @return	string
 	 */
 	public function getDomain() {
@@ -106,7 +108,7 @@ class Cookie {
 	}
 
 	/**
-	 * Recupera o timestamp da expiração do cookie
+	 * @brief	Recupera o timestamp da expiração do cookie
 	 * @return	integer
 	 */
 	public function getExpires() {
@@ -114,7 +116,7 @@ class Cookie {
 	}
 
 	/**
-	 * Recupera o nome do cookie
+	 * @brief	Recupera o nome do cookie
 	 * @return	string
 	 */
 	public function getName() {
@@ -122,7 +124,7 @@ class Cookie {
 	}
 
 	/**
-	 * Recupera o caminho do cookie
+	 * @brief	Recupera o caminho do cookie
 	 * @return	string
 	 */
 	public function getPath() {
@@ -130,7 +132,7 @@ class Cookie {
 	}
 
 	/**
-	 * Recupera o valor do cookie
+	 * @brief	Recupera o valor do cookie
 	 * @return	string
 	 */
 	public function getValue() {
@@ -138,8 +140,9 @@ class Cookie {
 	}
 
 	/**
-	 * Verifica se o User-Agent deve utilizar o cookie
-	 * apenas em ambiente seguro.
+	 * @brief	Verifica ambiente seguro.
+	 * @details	Verifica se o User-Agent deve utilizar o
+	 * cookie apenas em ambiente seguro.
 	 * @return	boolean
 	 */
 	public function isSecure() {

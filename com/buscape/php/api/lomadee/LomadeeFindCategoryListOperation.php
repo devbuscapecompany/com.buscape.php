@@ -1,15 +1,15 @@
 <?php
 /**
- * Classes relacionadas com a API Lomadee
+ * @brief	Classes relacionadas com a API Lomadee
  * @package	com.buscape.php.api.lomadee
  */
 
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
- * Essa classe representa a operação findCategoryList da
- * API do Lomadee.
- * @package	com.buscape.php.api.lomadee
+ * @brief	Operação findCategoryList
+ * @details	Essa classe representa a operação findCategoryList
+ * da API do Lomadee.
  */
 class LomadeeFindCategoryListOperation extends APIOperation {
 	/**
@@ -23,7 +23,7 @@ class LomadeeFindCategoryListOperation extends APIOperation {
 	private $keyword;
 
 	/**
-	 * Recupera o ID da categoria.
+	 * @brief	Recupera o ID da categoria.
 	 * @return	integer
 	 */
 	public function getCategoryId() {
@@ -31,7 +31,7 @@ class LomadeeFindCategoryListOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera a palavra chave.
+	 * @brief	Recupera a palavra chave.
 	 * @return	string
 	 */
 	public function getKeyword() {
@@ -47,7 +47,7 @@ class LomadeeFindCategoryListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID da categoria.
+	 * @brief	Define o ID da categoria.
 	 * @param	integer $categoryId
 	 * @throws	InvalidArgumentException Se o ID da categoria não for
 	 * um inteiro
@@ -62,8 +62,8 @@ class LomadeeFindCategoryListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define a palavra chave.
-	 * O parâmetro keyword sempre retornará uma lista de subcategorias
+	 * @brief	Define a palavra chave.
+	 * @details	O parâmetro keyword sempre retornará uma lista de subcategorias
 	 * Por exemplo, fazendo uma pesquisa por keyword=LG, teremos apenas
 	 * a lista de subcategorias, sendo que as primeiras são as mais relevantes.
 	 * @param	string $keyword

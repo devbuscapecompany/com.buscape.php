@@ -1,15 +1,15 @@
 <?php
 /**
- * Classes relacionadas com a API BuscaPé
+ * @brief	Classes relacionadas com a API BuscaPé
  * @package	com.buscape.php.api.buscape
  */
 
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
- * Essa classe representa a operação viewSellerDetails da
- * API do BuscaPé.
- * @package	com.buscape.php.api.buscape
+ * @brief	Detalhes de vendedores
+ * @details	Essa classe representa a operação viewSellerDetails
+ * da API do BuscaPé.
  */
 class BuscapeViewSellerDetailsOperation extends APIOperation {
 	/**
@@ -18,7 +18,7 @@ class BuscapeViewSellerDetailsOperation extends APIOperation {
 	private $sellerId;
 
 	/**
-	 * Recupera o ID do vendedor.
+	 * @brief	Recupera o ID do vendedor.
 	 * @return	integer
 	 */
 	public function getSellerId() {
@@ -34,7 +34,7 @@ class BuscapeViewSellerDetailsOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID do vendedor.
+	 * @brief	Define o ID do vendedor.
 	 * @param	integer $sellerId
 	 * @throws	InvalidArgumentException Se o ID do vendedor não for
 	 * um inteiro

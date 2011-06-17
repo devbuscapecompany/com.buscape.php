@@ -1,6 +1,7 @@
 <?php
 /**
- * Classes e interfaces relacionadas com o protocolo HTTP
+ * @brief	Protocolo HTTP
+ * @details	Classes e interfaces relacionadas com o protocolo HTTP
  * @package com.buscape.php.http
  */
 
@@ -9,17 +10,16 @@ require_once 'com/buscape/php/http/HTTPRequestMethod.php';
 require_once 'com/buscape/php/http/CURL.php';
 
 /**
- * Implementação de um conector HTTP.
- * @package com.buscape.php.http
+ * @brief	Implementação de um conector HTTP.
  */
 class HTTPConnection {
 	/**
-	 * Porta padrão de uma conexão HTTP não segura.
+	 * @brief	Porta padrão de uma conexão HTTP não segura.
 	 */
 	const HTTP_PORT = 80;
 
 	/**
-	 * Porta padrão de uma conexão HTTP segura.
+	 * @brief	Porta padrão de uma conexão HTTP segura.
 	 */
 	const HTTPS_PORT = 443;
 
@@ -84,7 +84,7 @@ class HTTPConnection {
 	protected static $userAgent;
 
 	/**
-	 * Constroi o objeto de conexão HTTP.
+	 * @brief	Constroi o objeto de conexão HTTP.
 	 */
 	public function __construct() {
 		if ( self::$userAgent == null ) {
@@ -104,7 +104,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Adiciona um campo de cabeçalho para ser enviado com a
+	 * @brief	Adiciona um campo de cabeçalho para ser enviado com a
 	 * requisição.
 	 * @param	string $name Nome do campo de cabeçalho.
 	 * @param	string $value Valor do campo de cabeçalho.
@@ -130,7 +130,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Fecha a conexão.
+	 * @brief	Fecha a conexão.
 	 * @throws	BadMethodCallException Se não houver uma conexão
 	 * inicializada.
 	 */
@@ -139,7 +139,8 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Executa a requisição HTTP em um caminho utilizando um
+	 * @brief	Executa a requisição
+	 * @details	Executa a requisição HTTP em um caminho utilizando um
 	 * método específico.
 	 * @param	string $path Caminho da requisição.
 	 * @param	string $method Método da requisição.
@@ -229,7 +230,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Recupera o timeout de conexão.
+	 * @brief	Recupera o timeout de conexão.
 	 * @return	integer
 	 */
 	public function getConnectionTimeout() {
@@ -237,7 +238,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Recupera o gerenciador de Cookies.
+	 * @brief	Recupera o gerenciador de Cookies.
 	 * @return	CookieManager
 	 */
 	public function getCookieManager() {
@@ -245,7 +246,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Recupera o host da conexão.
+	 * @brief	Recupera o host da conexão.
 	 * @return	string
 	 * @throws	BadMethodCallException Se a conexão não tiver
 	 * sido inicializada.
@@ -265,7 +266,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Recupera o nome do host.
+	 * @brief	Recupera o nome do host.
 	 * @return	string
 	 * @throws	BadMethodCallException Se não houver uma conexão
 	 * inicializada.
@@ -279,7 +280,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Recupera a porta que será utilizada na conexão.
+	 * @brief	Recupera a porta que será utilizada na conexão.
 	 * @return	integer
 	 * @throws	BadMethodCallException Se não houver uma conexão
 	 * inicializada.
@@ -293,7 +294,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Recupera o timeout.
+	 * @brief	Recupera o timeout.
 	 * @return	integer
 	 */
 	public function getTimeout() {
@@ -301,7 +302,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Recupera a URI que será utilizada na conexão.
+	 * @brief	Recupera a URI que será utilizada na conexão.
 	 * @return	string
 	 * @throws	BadMethodCallException Se não houver uma conexão
 	 * inicializada.
@@ -315,7 +316,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Inicializa a conexão HTTP.
+	 * @brief	Inicializa a conexão HTTP.
 	 * @param	string $hostname Servidor que receberá a requisição.
 	 * @param	boolean $secure Indica se a conexão será segura (https).
 	 * @param	integer $port Porta da requisição.
@@ -342,7 +343,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Verifica se é uma conexão segura.
+	 * @brief	Verifica se é uma conexão segura.
 	 * @return	boolean
 	 */
 	public function isSecure() {
@@ -350,7 +351,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Cria uma instância de um objeto de requisição HTTP.
+	 * @brief	Cria uma instância de um objeto de requisição HTTP.
 	 * @return	HTTPRequest
 	 */
 	public function newRequest() {
@@ -358,7 +359,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Define um autenticador HTTP.
+	 * @brief	Define um autenticador HTTP.
 	 * @param	HTTPAuthenticator $httpAuthenticator
 	 */
 	public function setAuthenticator( HTTPAuthenticator $httpAuthenticator ) {
@@ -366,7 +367,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Define o timeout de conexão.
+	 * @brief	Define o timeout de conexão.
 	 * @param	integer $connectionTimeout
 	 * @throws	InvalidArgumentException Se $connectionTimeout não for um inteiro.
 	 */
@@ -379,7 +380,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Define um gerenciador de cookies para essa conexão.
+	 * @brief	Define um gerenciador de cookies para essa conexão.
 	 * @param	CookieManager $cookieManager
 	 */
 	public function setCookieManager( CookieManager $cookieManager ) {
@@ -387,7 +388,8 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Define um parâmetro que será enviado com a requisição,
+	 * @brief	Define um parâmetro
+	 * @details	Define um parâmetro que será enviado com a requisição,
 	 * um parâmetro é um par nome-valor que será enviado como uma
 	 * query string (<b>ex:</b> <i>?name=value</i>).
 	 * @param	string $name Nome do parâmetro.
@@ -404,7 +406,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Define o corpo da requisição.
+	 * @brief	Define o corpo da requisição.
 	 * @param	string $requestBody
 	 */
 	public function setRequestBody( $requestBody ) {
@@ -412,7 +414,7 @@ class HTTPConnection {
 	}
 
 	/**
-	 * Define o timeout.
+	 * @brief	Define o timeout.
 	 * @param	integer $timeout
 	 * @throws	InvalidArgumentException Se $timeout não for um inteiro.
 	 */

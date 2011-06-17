@@ -1,20 +1,29 @@
 <?php
 /**
- * Classes relacionadas com a API BuscaPé
+ * @brief	Classes relacionadas com a API BuscaPé
  * @package	com.buscape.php.api.buscape
  */
 
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
- * Essa classe representa a operação findCategoryList da
- * API do BuscaPé.
+ * @brief	Lista de categorias
+ * @details	Essa classe representa a operação findCategoryList
+ * da API do BuscaPé.
  *
  * O serviço de procura de categorias permite que sejam
  * exibidas informações relativas às categorias. É possível
  * obter categorias, produtos ou ofertas informando apenas
  * um ID de categoria.
- * @package	com.buscape.php.api.buscape
+ *
+ * Existem três tipos de categorias:
+ *
+ * @li	Categoria raiz - É o primeiro nível da árvore. Através
+ * dela obtemos as subcategorias.
+ * @li	Subcategoria - É o segundo nível da árvore, em que podemos
+ * obter outras subcategorias ou categorias finais.
+ * @li	Categoria final - É o último nível da árvore, estando relacionado
+ * a uma lista de produtos, ofertas ou serviços.
  */
 class BuscapeFindCategoryListOperation extends APIOperation {
 	/**
@@ -28,7 +37,7 @@ class BuscapeFindCategoryListOperation extends APIOperation {
 	private $keyword;
 
 	/**
-	 * Recupera o ID da categoria.
+	 * @brief	Recupera o ID da categoria.
 	 * @return	integer
 	 */
 	public function getCategoryId() {
@@ -36,7 +45,7 @@ class BuscapeFindCategoryListOperation extends APIOperation {
 	}
 
 	/**
-	 * Recupera a palavra chave.
+	 * @brief	Recupera a palavra chave.
 	 * @return	string
 	 */
 	public function getKeyword() {
@@ -52,7 +61,7 @@ class BuscapeFindCategoryListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define o ID da categoria.
+	 * @brief	Define o ID da categoria.
 	 * @param	integer $categoryId
 	 * @throws	InvalidArgumentException Se o ID da categoria não for
 	 * um inteiro
@@ -67,10 +76,11 @@ class BuscapeFindCategoryListOperation extends APIOperation {
 	}
 
 	/**
-	 * Define a palavra chave.
-	 * O parâmetro keyword sempre retornará uma lista de subcategorias
-	 * Por exemplo, fazendo uma pesquisa por keyword=LG, teremos apenas
-	 * a lista de subcategorias, sendo que as primeiras são as mais relevantes.
+	 * @brief	Define a palavra chave.
+	 * @details	O parâmetro keyword sempre retornará uma lista de
+	 * subcategorias por exemplo, fazendo uma pesquisa por keyword=LG,
+	 * teremos apenas a lista de subcategorias, sendo que as primeiras
+	 * são as mais relevantes.
 	 * @param	string $keyword
 	 * @throws	InvalidArgumentException Se a palavra chave definida
 	 * não for uma string ou um valor scalar.

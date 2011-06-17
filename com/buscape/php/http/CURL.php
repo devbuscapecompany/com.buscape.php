@@ -1,6 +1,7 @@
 <?php
 /**
- * Classes e interfaces relacionadas com o protocolo HTTP
+ * @brief	Protocolo HTTP
+ * @details	Classes e interfaces relacionadas com o protocolo HTTP
  * @package com.buscape.php.http
  */
 
@@ -8,8 +9,9 @@ require_once 'com/buscape/php/http/HTTPRequest.php';
 require_once 'com/buscape/php/http/HTTPResponse.php';
 
 /**
- * Implementação de uma requisição HTTP que utiliza cURL.
- * @package com.buscape.php.http
+ * @brief	Requisição HTTP cURL
+ * @details	Implementação da interface HTTPRequest para uma
+ * requisição HTTP que utiliza cURL.
  */
 class CURL implements HTTPRequest {
 	/**
@@ -48,7 +50,8 @@ class CURL implements HTTPRequest {
 	private $requestParameter = array();
 
 	/**
-	 * Destroi o objeto e fecha a requisição se estiver
+	 * @brief	Destroi o objeto
+	 * @details	Destroi o objeto e fecha a requisição se estiver
 	 * aberta.
 	 */
 	public function __destruct() {
@@ -75,8 +78,9 @@ class CURL implements HTTPRequest {
 	}
 
 	/**
-	 * Autentica uma requisição HTTP.
+	 * @brief	Autentica uma requisição HTTP.
 	 * @param	HTTPAuthenticator $authenticator
+	 * @see		HTTPRequest::authenticate()
 	 */
 	public function authenticate( HTTPAuthenticator $authenticator ) {
 		$authenticator->authenticate( $this );
@@ -219,13 +223,15 @@ class CURL implements HTTPRequest {
 	}
 
 	/**
-	 * Define um parâmetro que será enviado com a requisição,
+	 * @brief	Define um parâmetro
+	 * @details	Define um parâmetro que será enviado com a requisição,
 	 * um parâmetro é um par nome-valor que será enviado como uma
 	 * query string (<b>ex:</b> <i>?name=value</i>).
 	 * @param	string $name Nome do parâmetro.
 	 * @param	string $value Valor do parâmetro.
 	 * @throws	InvalidArgumentException Se o nome ou o valor
 	 * do campo não forem valores scalar.
+	 * @see		HTTPRequest::setParameter()
 	 */
 	public function setParameter( $name , $value ) {
 		$this->requestParameter[ $name ] = $value;

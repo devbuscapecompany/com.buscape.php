@@ -1,19 +1,17 @@
 <?php
 /**
- * Classes e interfaces para integração com as APIs do
- * Grupo BuscaPé
+ * @brief	Pacote base da biblioteca do grupo BuscaPé
+ * @details	Esse pacote contém as classes e interfaces
+ * necessárias para integração com as APIs do Grupo BuscaPé
  * @package	com.buscape.php.api
  */
 
 require_once 'com/buscape/php/http/HTTPConnection.php';
 
 /**
- * Base para a implementação de uma API do Grupo BuscaPé.
- *
- * Essa classe reúne código comum para todas as APIs do Grupo
+ * @brief	Base para a implementação de uma API do Grupo BuscaPé.
+ * @details	Essa classe reúne código comum para todas as APIs do Grupo
  * BuscaPé.
- * @abstract
- * @package	com.buscape.php.api
  */
 abstract class APIInterface {
 	/**
@@ -32,7 +30,7 @@ abstract class APIInterface {
 	protected $sandbox = false;
 
 	/**
-	 * Recupera o ID da aplicação.
+	 * @brief	Recupera o ID da aplicação.
 	 * @return	string
 	 */
 	public function getApplicationId() {
@@ -40,7 +38,7 @@ abstract class APIInterface {
 	}
 
 	/**
-	 * Recupera o objeto de conexão HTTP relacionado.
+	 * @brief	Recupera o objeto de conexão HTTP relacionado.
 	 * @return	HTTPConnection
 	 */
 	public function getHTTPConnection() {
@@ -48,7 +46,7 @@ abstract class APIInterface {
 	}
 
 	/**
-	 * Recupera o host da API.
+	 * @brief	Recupera o host da API.
 	 * @return	string
 	 */
 	public function getTargetHost() {
@@ -60,7 +58,7 @@ abstract class APIInterface {
 	}
 
 	/**
-	 * Define o ID da aplicação.
+	 * @brief	Define o ID da aplicação.
 	 * @param	string $applicationId
 	 */
 	public function setApplicationId( $applicationId ) {
@@ -68,7 +66,7 @@ abstract class APIInterface {
 	}
 
 	/**
-	 * Define o objeto de conexão HTTP
+	 * @brief	Define o objeto de conexão HTTP
 	 * @param	HTTPConnection $httpConnection Objeto de conexão
 	 * HTTP que será utilizado para realizar as chamadas às operações
 	 * da API.
@@ -78,7 +76,7 @@ abstract class APIInterface {
 	}
 
 	/**
-	 * Define que as operações serão executadas no sandbox.
+	 * @brief	Define que as operações serão executadas no sandbox.
 	 * @param	boolean $sandbox Indica se a API utilizará
 	 * o sandbox.
 	 */

@@ -1,15 +1,17 @@
 <?php
 /**
- * Classes e interfaces relacionadas com o protocolo HTTP
+ * @brief	Protocolo HTTP
+ * @details	Classes e interfaces relacionadas com o protocolo HTTP
  * @package com.buscape.php.http
  */
 
 require_once 'com/buscape/php/http/CookieManager.php';
 
 /**
- * Implementação de um gerenciador de cookies que armazena
- * os cookies em um arquivo em disco.
- * @package com.buscape.php.http
+ * @brief	Gerenciador de Cookies HTTP
+ * @details	Implementação da interface CookieManager para
+ * criação de um gerenciador de cookies que armazena os
+ * cookies em um arquivo em disco.
  */
 class HTTPCookieManager implements CookieManager {
 	/**
@@ -23,7 +25,7 @@ class HTTPCookieManager implements CookieManager {
 	private $cookies = array();
 
 	/**
-	 * Constroi o gerenciador de cookies que grava as informações
+	 * @brief	Constroi o gerenciador de cookies que grava as informações
 	 * em um arquivo.
 	 * @param	string $dirname Diretório onde os cookies serão
 	 * gravados, caso não informado o diretório temporário do
@@ -54,7 +56,7 @@ class HTTPCookieManager implements CookieManager {
 	}
 
 	/**
-	 * Destroi o objeto e salva os cookies armazenados
+	 * @brief	Destroi o objeto e salva os cookies armazenados
 	 */
 	public function __destruct() {
 		if ( $this->cookieFile != null ) {
