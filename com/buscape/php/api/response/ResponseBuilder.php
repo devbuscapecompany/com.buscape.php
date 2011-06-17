@@ -1,9 +1,16 @@
 <?php
+/**
+ * Classes que representam ou convertem o retorno das operações das
+ * APIs do Grupo BuscaPé em entidades.
+ * @package com.buscape.php.api.response
+ */
+
 require_once 'com/buscape/php/api/response/Result.php';
 
 /**
  * Interface para criação do objeto de resposta das
- * requisições às APIs do grupo Buscapé
+ * requisições às APIs do grupo Buscapé.
+ * @package com.buscape.php.api.response
  */
 abstract class ResponseBuilder {
 	/**

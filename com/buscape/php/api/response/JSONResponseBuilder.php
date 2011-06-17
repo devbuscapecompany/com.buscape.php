@@ -1,4 +1,10 @@
 <?php
+/**
+ * Classes que representam ou convertem o retorno das operações das
+ * APIs do Grupo BuscaPé em entidades.
+ * @package com.buscape.php.api.response
+ */
+
 require_once 'com/buscape/php/api/response/Address.php';
 require_once 'com/buscape/php/api/response/AddressList.php';
 require_once 'com/buscape/php/api/response/Category.php';
@@ -22,6 +28,7 @@ require_once 'com/buscape/php/api/response/UserAverageRating.php';
 /**
  * Constroi o objeto de resultado de uma resposta no formato
  * JSON.
+ * @package com.buscape.php.api.response
  */
 class JSONResponseBuilder extends ResponseBuilder {
 	/**

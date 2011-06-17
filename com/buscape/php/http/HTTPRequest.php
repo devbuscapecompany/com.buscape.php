@@ -1,4 +1,9 @@
 <?php
+/**
+ * Classes e interfaces relacionadas com o protocolo HTTP
+ * @package com.buscape.php.http
+ */
+
 require_once 'com/buscape/php/http/HTTPConnection.php';
 require_once 'com/buscape/php/http/HTTPAuthenticator.php';
 require_once 'com/buscape/php/http/HTTPRequestMethod.php';
@@ -6,6 +11,7 @@ require_once 'com/buscape/php/http/HTTPRequestMethod.php';
 /**
  * Interface para definição de um objeto que fará uma
  * requisição HTTP.
+ * @package com.buscape.php.http
  */
 interface HTTPRequest {
 	/**

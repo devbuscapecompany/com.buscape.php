@@ -1,4 +1,9 @@
 <?php
+/**
+ * Classes relacionadas com a API BuscaPé
+ * @package	com.buscape.php.api.buscape
+ */
+
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
@@ -9,6 +14,7 @@ require_once 'com/buscape/php/api/APIOperation.php';
  * exibidas informações relativas às categorias. É possível
  * obter categorias, produtos ou ofertas informando apenas
  * um ID de categoria.
+ * @package	com.buscape.php.api.buscape
  */
 class BuscapeFindCategoryListOperation extends APIOperation {
 	/**

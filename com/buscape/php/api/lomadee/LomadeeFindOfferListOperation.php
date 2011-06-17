@@ -1,4 +1,9 @@
 <?php
+/**
+ * Classes relacionadas com a API Lomadee
+ * @package	com.buscape.php.api.lomadee
+ */
+
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
@@ -15,6 +20,7 @@ require_once 'com/buscape/php/api/APIOperation.php';
  * etc, porém os links são CPA. Na API BuscaPé o mesmo serviço
  * de ofertas, os links são CPC, sendo a única diferença entre
  * os serviços.
+ * @package	com.buscape.php.api.lomadee
  */
 class LomadeeFindOfferListOperation extends APIOperation {
 	/**

@@ -1,9 +1,15 @@
 <?php
+/**
+ * Classes e interfaces relacionadas com o protocolo HTTP
+ * @package com.buscape.php.http
+ */
+
 require_once 'com/buscape/php/http/CookieManager.php';
 
 /**
  * Implementação de um gerenciador de cookies que armazena
  * os cookies em um arquivo em disco.
+ * @package com.buscape.php.http
  */
 class HTTPCookieManager implements CookieManager {
 	/**

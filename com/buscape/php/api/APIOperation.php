@@ -1,4 +1,10 @@
 <?php
+/**
+ * Classes e interfaces para integração com as APIs do
+ * Grupo BuscaPé
+ * @package	com.buscape.php.api
+ */
+
 require_once 'com/buscape/php/api/APIInterface.php';
 require_once 'com/buscape/php/api/response/JSONResponseBuilder.php';
 require_once 'com/buscape/php/api/response/XMLResponseBuilder.php';
@@ -6,6 +12,8 @@ require_once 'com/buscape/php/api/response/XMLResponseBuilder.php';
 /**
  * Interface para criação de uma operação das APIs
  * do Grupo BuscaPé.
+ * @abstract
+ * @package	com.buscape.php.api
  */
 abstract class APIOperation {
 	/**

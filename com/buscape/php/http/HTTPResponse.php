@@ -1,8 +1,14 @@
 <?php
+/**
+ * Classes e interfaces relacionadas com o protocolo HTTP
+ * @package com.buscape.php.http
+ */
+
 require_once 'com/buscape/php/http/CookieManager.php';
 
 /**
  * Implementação de um objeto representa uma resposta HTTP.
+ * @package com.buscape.php.http
  */
 class HTTPResponse {
 	/**

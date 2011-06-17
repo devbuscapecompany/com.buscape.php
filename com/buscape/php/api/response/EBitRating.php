@@ -1,5 +1,13 @@
 <?php
 /**
+ * Classes que representam ou convertem o retorno das operações das
+ * APIs do Grupo BuscaPé em entidades.
+ * @package com.buscape.php.api.response
+ */
+
+/**
+ * Representação de uma avaliação de usuários no eBit
+ * @package com.buscape.php.api.response
  */
 class EBitRating {
 	/**

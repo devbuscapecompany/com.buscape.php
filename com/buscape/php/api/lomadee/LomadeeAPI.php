@@ -1,4 +1,9 @@
 <?php
+/**
+ * Classes relacionadas com a API Lomadee
+ * @package	com.buscape.php.api.lomadee
+ */
+
 require_once 'com/buscape/php/api/APIInterface.php';
 require_once 'com/buscape/php/api/lomadee/LomadeeCreateSourceOperation.php';
 require_once 'com/buscape/php/api/lomadee/LomadeeFindAdvertiserListOperation.php';
@@ -8,6 +13,7 @@ require_once 'com/buscape/php/api/lomadee/LomadeeFindProductListOperation.php';
 
 /**
  * Essa classe representa a API Lomadee.
+ * @package	com.buscape.php.api.lomadee
  */
 class LomadeeAPI extends APIInterface {
 	/**

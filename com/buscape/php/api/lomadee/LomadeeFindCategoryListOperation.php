@@ -1,9 +1,15 @@
 <?php
+/**
+ * Classes relacionadas com a API Lomadee
+ * @package	com.buscape.php.api.lomadee
+ */
+
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
  * Essa classe representa a operação findCategoryList da
  * API do Lomadee.
+ * @package	com.buscape.php.api.lomadee
  */
 class LomadeeFindCategoryListOperation extends APIOperation {
 	/**

@@ -1,4 +1,10 @@
 <?php
+/**
+ * Classes e interfaces para integração com as APIs do
+ * Grupo BuscaPé
+ * @package	com.buscape.php.api
+ */
+
 require_once 'com/buscape/php/http/HTTPConnection.php';
 
 /**
@@ -6,6 +12,8 @@ require_once 'com/buscape/php/http/HTTPConnection.php';
  *
  * Essa classe reúne código comum para todas as APIs do Grupo
  * BuscaPé.
+ * @abstract
+ * @package	com.buscape.php.api
  */
 abstract class APIInterface {
 	/**

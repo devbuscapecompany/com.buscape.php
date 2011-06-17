@@ -1,4 +1,9 @@
 <?php
+/**
+ * Classes relacionadas com a API BuscaPé
+ * @package	com.buscape.php.api.buscape
+ */
+
 require_once 'com/buscape/php/api/APIInterface.php';
 require_once 'com/buscape/php/api/buscape/BuscapeFindCategoryListOperation.php';
 require_once 'com/buscape/php/api/buscape/BuscapeFindOfferListOperation.php';
@@ -12,6 +17,7 @@ require_once 'com/buscape/php/api/buscape/BuscapeViewUserRatingsOperation.php';
  * Essa classe representa a API Buscapé, com ela pode-se utilizar
  * todas as operações para localizar ofertas de produtos, categorias
  * informações sobre vendedores e opinião de clientes.
+ * @package	com.buscape.php.api.buscape
  */
 class BuscapeAPI extends APIInterface {
 	/**

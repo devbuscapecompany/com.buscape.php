@@ -1,7 +1,13 @@
 <?php
 /**
+ * Classes e interfaces relacionadas com o protocolo HTTP
+ * @package com.buscape.php.http
+ */
+
+/**
  * Implementação de um cookie HTTP segundo a especificação
  * RFC 2109.
+ * @package com.buscape.php.http
  */
 class Cookie {
 	/**

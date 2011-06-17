@@ -1,6 +1,13 @@
 <?php
 /**
- *
+ * Classes que representam ou convertem o retorno das operações das
+ * APIs do Grupo BuscaPé em entidades.
+ * @package com.buscape.php.api.response
+ */
+
+/**
+ * Representação de uma lista de endereços
+ * @package com.buscape.php.api.response
  */
 class AddressList implements IteratorAggregate {
 	/**

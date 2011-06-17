@@ -1,4 +1,9 @@
 <?php
+/**
+ * Classes relacionadas com a API Lomadee
+ * @package	com.buscape.php.api.lomadee
+ */
+
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
@@ -12,6 +17,7 @@ require_once 'com/buscape/php/api/APIOperation.php';
  * Toda a documentação do serviço findProductList da API BuscaPé
  * se aplica ao serviço findProductList da API Lomadee. Possui
  * os mesmos filtros, os mesmos resultados, etc
+ * @package	com.buscape.php.api.lomadee
  */
 class LomadeeFindProductListOperation extends APIOperation {
 	/**

@@ -1,9 +1,15 @@
 <?php
+/**
+ * Classes e interfaces relacionadas com o protocolo HTTP
+ * @package com.buscape.php.http
+ */
+
 require_once 'com/buscape/php/http/HTTPRequest.php';
 require_once 'com/buscape/php/http/HTTPResponse.php';
 
 /**
  * Implementação de uma requisição HTTP que utiliza cURL.
+ * @package com.buscape.php.http
  */
 class CURL implements HTTPRequest {
 	/**

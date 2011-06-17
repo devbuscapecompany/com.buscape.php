@@ -1,4 +1,9 @@
 <?php
+/**
+ * Classes relacionadas com a API Lomadee
+ * @package	com.buscape.php.api.lomadee
+ */
+
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
@@ -9,6 +14,7 @@ require_once 'com/buscape/php/api/APIOperation.php';
  * vinculados a um determinado publisher, podendo assim obter uma
  * melhora na configuração de suas aplicações e permitindo que os
  * usuários escolham quais programas a aplicação utilizará.
+ * @package	com.buscape.php.api.lomadee
  */
 class LomadeeFindAdvertiserListOperation extends APIOperation {
 	/**

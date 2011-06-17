@@ -1,4 +1,10 @@
 <?php
+/**
+ * Classes e interfaces para integração com as APIs do
+ * Grupo BuscaPé
+ * @package	com.buscape.php.api
+ */
+
 require_once 'com/buscape/php/api/APIInterface.php';
 require_once 'com/buscape/php/api/buscape/BuscapeAPI.php';
 require_once 'com/buscape/php/api/lomadee/LomadeeAPI.php';
@@ -11,6 +17,7 @@ require_once 'com/buscape/php/http/HTTPCookieManager.php';
  *
  * Essa classe configura o objeto de integração, diminuindo a dificuldade
  * de implementação de uma integração com a API escolhida.
+ * @package	com.buscape.php.api
  */
 class GrupoBuscape {
 	/**

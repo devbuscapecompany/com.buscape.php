@@ -1,11 +1,19 @@
 <?php
+/**
+ * Classes que representam ou convertem o retorno das operações das
+ * APIs do Grupo BuscaPé em entidades.
+ * @package com.buscape.php.api.response
+ */
+
 require_once 'com/buscape/php/api/response/Category.php';
 require_once 'com/buscape/php/api/response/Product.php';
 require_once 'com/buscape/php/api/response/Offer.php';
 require_once 'com/buscape/php/api/response/ResultDetails.php';
 
 /**
- *
+ * Representação da resposta de uma chamada à uma operação das APIs do
+ * Grupo BuscaPé.
+ * @package com.buscape.php.api.response
  */
 class Result {
 	/**

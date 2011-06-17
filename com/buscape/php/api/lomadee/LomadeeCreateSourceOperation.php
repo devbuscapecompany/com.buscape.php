@@ -1,4 +1,9 @@
 <?php
+/**
+ * Classes relacionadas com a API Lomadee
+ * @package	com.buscape.php.api.lomadee
+ */
+
 require_once 'com/buscape/php/api/APIOperation.php';
 
 /**
@@ -9,6 +14,7 @@ require_once 'com/buscape/php/api/APIOperation.php';
  * a Lomadee. Dentro do fluxo de integração, o aplicativo utiliza
  * esse serviço para criar sourceId (código) para o Publisher que
  * deseja utiliza-lo.
+ * @package	com.buscape.php.api.lomadee
  */
 class LomadeeCreateSourceOperation extends APIOperation {
 	/**
