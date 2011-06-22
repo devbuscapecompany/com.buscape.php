@@ -70,6 +70,7 @@ class LomadeeFindAdvertiserListOperation extends APIOperation {
 	 */
 	public function setPublisherId( $publisherId ) {
 		$this->publisherId = $publisherId;
+		$this->apiInterface->getHTTPConnection()->setParam( 'publisherId' , $publisherId );
 	}
 
 	/**
@@ -78,6 +79,7 @@ class LomadeeFindAdvertiserListOperation extends APIOperation {
 	 */
 	public function setSiteId( $siteId ) {
 		$this->siteId = $siteId;
+		$this->apiInterface->getHTTPConnection()->setParam( 'siteId' , $siteId );
 	}
 
 	/**
@@ -86,5 +88,6 @@ class LomadeeFindAdvertiserListOperation extends APIOperation {
 	 */
 	public function setToken( $token ) {
 		$this->token = $token;
+		$this->apiInterface->getHTTPConnection()->setParam( 'token' , $token );
 	}
 }

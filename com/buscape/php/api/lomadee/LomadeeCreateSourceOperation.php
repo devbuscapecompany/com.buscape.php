@@ -96,6 +96,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	 */
 	public function setCampaignList( $campaignList ) {
 		$this->campaignList = $campaignList;
+		$this->apiInterface->getHTTPConnection()->setParam( 'campaignList' , $campaignList );
 	}
 
 	/**
@@ -104,6 +105,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	 */
 	public function setPublisherId( $publisherId ) {
 		$this->publisherId = $publisherId;
+		$this->apiInterface->getHTTPConnection()->setParam( 'publisherId' , $publisherId );
 	}
 
 	/**
@@ -112,6 +114,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	 */
 	public function setSiteId( $siteId ) {
 		$this->siteId = $siteId;
+		$this->apiInterface->getHTTPConnection()->setParam( 'siteId' , $siteId );
 	}
 
 	/**
@@ -120,6 +123,7 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	 */
 	public function setSourceName( $sourceName ) {
 		$this->sourceName = $sourceName;
+		$this->apiInterface->getHTTPConnection()->setParam( 'sourceName' , $sourceName );
 	}
 
 	/**
@@ -128,5 +132,6 @@ class LomadeeCreateSourceOperation extends APIOperation {
 	 */
 	public function setToken( $token ) {
 		$this->token = $token;
+		$this->apiInterface->getHTTPConnection()->setParam( 'token' , $token );
 	}
 }

@@ -1,21 +1,28 @@
 <?php
 /**
- * Classes que representam ou convertem o retorno das operações das
- * APIs do Grupo BuscaPé em entidades.
+ * @brief	Resposta das operações
+ * @details	Classes que representam ou convertem o retorno das operações das
+ * 			APIs do Grupo BuscaPé em entidades.
  * @package com.buscape.php.api.response
  */
 
+require_once 'com/buscape/php/api/response/Advertiser.php';
 require_once 'com/buscape/php/api/response/Category.php';
 require_once 'com/buscape/php/api/response/Product.php';
 require_once 'com/buscape/php/api/response/Offer.php';
 require_once 'com/buscape/php/api/response/ResultDetails.php';
 
 /**
- * Representação da resposta de uma chamada à uma operação das APIs do
+ * @brief	Resultado de uma operação
+ * @details	Representação da resposta de uma chamada à uma operação das APIs do
  * Grupo BuscaPé.
- * @package com.buscape.php.api.response
  */
 class Result {
+	/**
+	 * @var	array
+	 */
+	private $advertiser = array();
+
 	/**
 	 * @var	string
 	 */
@@ -77,9 +84,38 @@ class Result {
 	private $offer = array();
 
 	/**
+	 * @var	integer
+	 */
+	private $source;
+
+	/**
 	 * @var	Seller
 	 */
 	private $seller;
+
+	/**
+	 * @brief	Adiciona um anunciante
+	 * @param	Advertiser $advertiser
+	 */
+	public function addAdvertiser( Advertiser $advertiser ) {
+		$this->advertiser[] = $advertiser;
+	}
+
+	/**
+	 * @brief	Recupera um Iterator com os anunciantes
+	 * @return	Iterator
+	 */
+	public function getAdvertiserIterator() {
+		return new ArrayIterator( $this->advertiser );
+	}
+
+	/**
+	 * @brief	Recupera o source id, utilizado apenas no Lomadee
+	 * @return	integer
+	 */
+	public function getSource() {
+		return $this->source;
+	}
 
 	/**
 	 * Recupera o valor de $seller
@@ -87,6 +123,14 @@ class Result {
 	 */
 	public function getSeller() {
 		return $this->seller;
+	}
+
+	/**
+	 * @brief	Define o source id, utilizado apenas no Lomadee
+	 * @param	integer $id
+	 */
+	public function setSource( $id ) {
+		$this->source = (int) $id;
 	}
 
 	/**

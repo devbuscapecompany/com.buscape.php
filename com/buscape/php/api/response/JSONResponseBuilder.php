@@ -1,12 +1,13 @@
 <?php
 /**
- * Classes que representam ou convertem o retorno das operações das
- * APIs do Grupo BuscaPé em entidades.
+ * @brief	Resposta das operações
+ * @details	Classes que representam ou convertem o retorno das operações das
+ * 			APIs do Grupo BuscaPé em entidades.
  * @package com.buscape.php.api.response
  */
-
 require_once 'com/buscape/php/api/response/Address.php';
 require_once 'com/buscape/php/api/response/AddressList.php';
+require_once 'com/buscape/php/api/response/Advertiser.php';
 require_once 'com/buscape/php/api/response/Category.php';
 require_once 'com/buscape/php/api/response/Contact.php';
 require_once 'com/buscape/php/api/response/ContactList.php';
@@ -26,9 +27,9 @@ require_once 'com/buscape/php/api/response/Thumbnail.php';
 require_once 'com/buscape/php/api/response/UserAverageRating.php';
 
 /**
- * Constroi o objeto de resultado de uma resposta no formato
+ * @brief	Builder da resposta
+ * @details	Constroi o objeto de resultado de uma resposta no formato
  * JSON.
- * @package com.buscape.php.api.response
  */
 class JSONResponseBuilder extends ResponseBuilder {
 	/**
@@ -39,8 +40,11 @@ class JSONResponseBuilder extends ResponseBuilder {
 	public function parse( $content ) {
 		$json = json_decode( $content );
 
-		var_dump( $json );
-		die;
+		if ( isset( $json->advertiser ) ) {
+			foreach ( $json->advertiser as $a ) {
+				$this->result->addAdvertiser( $this->parseAdvertiser( $a->advertiser ) );
+			}
+		}
 
 		if ( isset( $json->category ) ) {
 			$this->result->setCategory( $this->parseCategory( $json->category ) );
@@ -68,6 +72,10 @@ class JSONResponseBuilder extends ResponseBuilder {
 			foreach ( $json->product as $p ) {
 				$this->result->addProduct( $this->parseProduct( $p->product ) );
 			}
+		}
+
+		if ( isset( $json->source ) && isset( $json->source->id ) ) {
+			$this->result->setSource( $json->source->id );
 		}
 
 		if ( isset( $json->seller ) ) {
@@ -128,6 +136,18 @@ class JSONResponseBuilder extends ResponseBuilder {
 		}
 
 		return $addressList;
+	}
+
+	/**
+	 * @param	stdClass $a
+	 * @return	Advertiser
+	 */
+	private function parseAdvertiser( stdClass $a ) {
+		$advertiser = new Advertiser();
+		$advertiser->setId( $a->id );
+		$advertiser->setName( $a->name );
+
+		return $advertiser;
 	}
 
 	/**
