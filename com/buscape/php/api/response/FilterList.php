@@ -1,13 +1,13 @@
 <?php
 /**
- * Classes que representam ou convertem o retorno das operações das
- * APIs do Grupo BuscaPé em entidades.
+ * @brief	Resposta das operações
+ * @details	Classes que representam ou convertem o retorno das operações das
+ * 			APIs do Grupo BuscaPé em entidades.
  * @package com.buscape.php.api.response
  */
 
 /**
- * Representação de uma lista de filtros.
- * @package com.buscape.php.api.response
+ * @brief	Representação de uma lista de filtros.
  */
 class FilterList implements IteratorAggregate {
 	/**

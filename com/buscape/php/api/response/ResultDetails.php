@@ -1,13 +1,13 @@
 <?php
 /**
- * Classes que representam ou convertem o retorno das operações das
- * APIs do Grupo BuscaPé em entidades.
+ * @brief	Resposta das operações
+ * @details	Classes que representam ou convertem o retorno das operações das
+ * 			APIs do Grupo BuscaPé em entidades.
  * @package com.buscape.php.api.response
  */
 
 /**
- * Representação dos detalhes do resultado de uma operação.
- * @package com.buscape.php.api.response
+ * @brief	Representação dos detalhes do resultado de uma operação.
  */
 class ResultDetails {
 	/**
